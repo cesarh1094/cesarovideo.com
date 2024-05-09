@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-family-heading: "Jersey 25", sans-serif;
+
+  --color-terminal-deep-black: #1a1b26;
+  --color-terminal-black: #1f2335;
+  --color-terminal-red: #f7768e;
+  --color-terminal-orange: #ff9e64;
+  --color-terminal-pale-purple: #c0caf5;
+  --color-terminal-purple: #bb9af7;
+  --color-terminal-light-blue: #7dcfff;
+  --color-terminal-green: #c3e88d;
+}
+
+html,
+body {
+  /* @apply color-terminal-black; */
+  background: var(--color-terminal-black);
+  color: var(--color-white);
+}
