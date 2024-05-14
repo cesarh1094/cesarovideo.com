@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import AnimationDots from '../components/qwik/AnimatingDots'
 import '../styles/tailwind.css';
+import {Logo} from '../components/solid/logo'
 ---
 
 <!doctype html>
@@ -12,9 +13,11 @@ import '../styles/tailwind.css';
 	</head>
 	<body class="overflow-x-hidden antialiased">
 		<main class="relative min-h-[100vh] flex justify-center items-center overflow-hidden gap-20">
-      <div class="relative flex gap-8 gap-12 flex-col">
+      <div class="relative flex gap-8 md:gap-16 flex-col">
+        <div class="max-w-[350px] ml-auto mr-auto">
+          <Logo />
+        </div>
         <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl relative text-center">Coming Soon!</h1>
-        <AnimationDots />
       </div>
       <div class="absolute top-[50%] left-[50%] h-[80%] w-[80%]"></div>
 		</main>
