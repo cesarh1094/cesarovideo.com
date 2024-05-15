@@ -15,8 +15,8 @@ export default defineConfig({
       include: "**/qwik/*",
     }),
     solidJs({
+      devtools: true,
       include: ["**/solid/*", "**/node_modules/@suid/material/**"],
     }),
   ],
 });
-
