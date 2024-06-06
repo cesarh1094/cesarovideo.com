@@ -1,20 +1,18 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import AnimationDots from '../components/qwik/AnimatingDots'
-import '../styles/tailwind.css';
-import {Logo} from '../components/solid/logo'
-import {Header} from '../components/solid/header'
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import "../styles/tailwind.css";
+import { Header } from "../components/solid/header";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="overflow-x-hidden antialiased">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="overflow-x-hidden antialiased">
     <Header client:load />
-		<main class="relative min-h-[100vh] flex justify-center items-center overflow-hidden gap-20">
+    <main id="main">
       <!-- <div class="relative flex gap-8 md:gap-16 flex-col"> -->
       <!--   <div class="max-w-[350px] ml-auto mr-auto"> -->
       <!--     <Logo /> -->
@@ -22,6 +20,50 @@ import {Header} from '../components/solid/header'
       <!--   <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl relative text-center">Coming Soon!</h1> -->
       <!-- </div> -->
       <!-- <div class="absolute top-[50%] left-[50%] h-[80%] w-[80%]"></div> -->
-		</main>
-	</body>
+      <section class="">
+        <div
+          class="w-full max-w-7xl mx-auto px-6 py-9 flex flex-col gap-6 lg:gap-8"
+        >
+          <h2 class="text-5xl font-heading">Things I've worked on</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="flex flex-col bg-terminal-black/40 border border-terminal-deep-black/30 gap-4 transition-all shadow-lg shadow-terminal-red/35 hover:shadow-sm hover:shadow-terminal-red/35 md:p-6 lg:p-8 lg:pb-9 rounded-lg hover:translate-y-1"
+            >
+              <h3 class="font-heading text-3xl">Climate United</h3>
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                consectetur auctor dolor vel facilisis. Ut vel diam id massa
+                auctor finibus ac in purus. Cras dapibus interdum lacus. Nullam
+                eu nulla in mi malesuada eleifend posuere nec libero.
+              </p>
+            </div>
+            <div
+              class="flex flex-col bg-terminal-black/40 border border-terminal-deep-black/30 gap-4 transition-all shadow-lg shadow-terminal-orange/35 hover:shadow-sm hover:shadow-terminal-orange/35 md:p-6 lg:p-8 lg:pb-9 rounded-lg hover:translate-y-1"
+            >
+              <h3 class="font-heading text-3xl">
+                Lambda Legal Website Rebuild
+              </h3>
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                consectetur auctor dolor vel facilisis. Ut vel diam id massa
+                auctor finibus ac in purus. Cras dapibus interdum lacus. Nullam
+                eu nulla in mi malesuada eleifend posuere nec libero.
+              </p>
+            </div>
+            <div
+              class="flex flex-col bg-terminal-black/40 border border-terminal-deep-black/30 gap-4 transition-all shadow-lg shadow-terminal-purple/35 hover:shadow-sm hover:shadow-terminal-purple/35 md:p-6 lg:p-8 lg:pb-9 rounded-lg hover:translate-y-1"
+            >
+              <h3 class="font-heading text-3xl">Recent Project</h3>
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                consectetur auctor dolor vel facilisis. Ut vel diam id massa
+                auctor finibus ac in purus. Cras dapibus interdum lacus. Nullam
+                eu nulla in mi malesuada eleifend posuere nec libero.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

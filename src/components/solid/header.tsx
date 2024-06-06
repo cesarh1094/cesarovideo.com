@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header class="block w-full">
       <div class="flex justify-between max-w-7xl items-center ml-auto mr-auto px-6 py-8 gap-12 md:justify-space-between">
-        <div class="max-w-[70px] md:max-w-[150px]">
+        <div class="max-w-[70px] md:max-w-[100px] xl:max-w-[120px]">
           <Logo />
         </div>
         <div class="md:grow">
@@ -35,15 +35,8 @@ export function Header() {
             class="hidden font-heading md:text-right md:flex flex-col md:flex-row md:gap-14 lg:gap-20 xl:gap-24 md:justify-end"
             inert={!navOpen()}
           >
-            <ul class="flex flex-col md:flex-row md:text-3xl lg:text-4xl items-center gap-4 md:gap-12">
-              <li>
-                <a href="/blog">About</a>
-              </li>
-              <li>
-                <a href="/blog">Blog</a>
-              </li>
-            </ul>
-            <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            <ul class="flex flex-col md:flex-row md:text-2xl items-center gap-4 md:gap-12"></ul>
+            <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6  lg:gap-10">
               <li>
                 <a
                   href=""
