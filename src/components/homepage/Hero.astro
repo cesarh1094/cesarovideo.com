@@ -7,18 +7,18 @@
     class="w-full max-w-7xl mx-auto px-8 md:px-12 py-48 pt-10 md:pt-20 pb-10 md:pb-28 flex flex-col gap-6 lg:gap-10"
   >
     <div>
-      <h1 class="text-md md:text-2xl flex flex-col gap-2 font-light tracking-wide" id="tagline">
-        <span>
+      <h1 class="text-md md:text-2xl flex flex-col gap-2 font-light tracking-normal" id="tagline">
+        <span class="font-body">
           Welcome to my website, I'm
         </span>
         <span class="font-heading text-4xl h-8 md:text-7xl md:h-18" id="name">Cesar Hernandez</span>
       </h1>
     </div>
     <div class="flex flex-col gap-3.5">
-      <h2 class="text-lg md:text-3xl font-body tracking-wide">
-        I'm a full stack developer.
+      <h2 class="text-lg md:text-3xl font-body -tracking-normal">
+        I'm a full stack software engineer.
       </h2>
-      <p class="font-light text-sm md:text-md tracking-ride">
+      <p class="font-light text-sm md:text-md tracking-ride font-body">
         I have worked with the following technologies:
         <p>
           <div
@@ -358,10 +358,10 @@
 </section>
 
 <script>
-import {TextPlugin} from "gsap/TextPlugin";
-  import gsap from "gsap";
+import {gsap} from "gsap";
+  import {TextPlugin} from "gsap/TextPlugin";
 
-gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(TextPlugin);
 
   let mm = gsap.matchMedia();
 
@@ -382,12 +382,14 @@ gsap.registerPlugin(TextPlugin);
 
 
   gsap.from("#name", {
-  padSapce: true,
   delay: .75,
   duration: 2,
-    text: "",
+  text:{
+  preserveSpaces: true,
+  padSpace: true,
+    value: "",
   delimeter: " ",
-preserveSpaces: true
+  }
   })
 
 </script>
