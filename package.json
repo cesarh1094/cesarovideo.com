@@ -10,22 +10,22 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/mdx": "^3.1.0",
-    "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.5",
-    "@astrojs/solid-js": "^4.3.0",
-    "@builder.io/qwik": "^1.5.4",
-    "@qwikdev/astro": "^0.5.15",
-    "astro": "^4.10.1",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.7",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/solid-js": "^5.0.4",
+    "@builder.io/qwik": "^1.12.0",
+    "@qwikdev/astro": "^0.7.8",
+    "astro": "^5.1.8",
     "gsap": "^3.12.5",
     "solid-js": "^1.8.17",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0-alpha.14",
-    "prettier": "^3.3.1",
-    "prettier-plugin-astro": "^0.14.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
     "solid-devtools": "^0.30.1",
     "tailwindcss": "^4.0.0-alpha.14"
   }
