@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import 'solid-devtools';
 import { Logo } from "./logo";
 
 export function Header() {
@@ -6,7 +7,7 @@ export function Header() {
 
   return (
     <header class="block w-full">
-      <div class="flex justify-between max-w-7xl items-center ml-auto mr-auto px-6 py-8 gap-12 md:justify-space-between">
+      <div class="flex justify-between max-w-7xl items-center ml-auto mr-auto px-8 py-8 md:px-12 gap-12 md:justify-space-between">
         <div class="max-w-[70px] md:max-w-[100px] xl:max-w-[120px]">
           <Logo />
         </div>
