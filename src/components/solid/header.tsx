@@ -1,9 +1,18 @@
-import { createSignal } from "solid-js";
+import { createSignal, createEffect } from "solid-js";
 import 'solid-devtools';
 import { Logo } from "./logo";
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
 export function Header() {
-  const [navOpen, setNavOpen] = createSignal(true);
+  const [navOpen, setNavOpen] = createSignal(false);
+
+  createEffect(() => {
+    console.log(navOpen())
+  })
 
   return (
     <header class="block w-full">
@@ -12,59 +21,28 @@ export function Header() {
           <Logo />
         </div>
         <div class="md:grow">
-          <button
-            class="inline-block md:hidden"
-            aria-label="Toggle Menu"
-            onClick={() => setNavOpen(() => !navOpen())}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width={1.5}
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
-              />
-            </svg>
-          </button>
           <nav
-            class="hidden font-heading md:text-right md:flex flex-col md:flex-row md:gap-14 lg:gap-20 xl:gap-24 md:justify-end"
+            class={cn('relative font-heading md:text-right flex flex-row  md:gap-14 lg:gap-20 xl:gap-24 md:justify-end', navOpen() ? 'flex': '')}
             inert={!navOpen()}
           >
-            <ul class="flex flex-col md:flex-row md:text-2xl items-center gap-4 md:gap-12"></ul>
-            <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6  lg:gap-10">
+            <ul class="flex flex-row md:flex-row items-center gap-8 md:gap-6  lg:gap-12">
               <li>
                 <a
                   href="https://www.linkedin.com/in/cesarovideo"
-                  class="block h-[17px] w-[17px] lg:h-[20px] lg:w-[20px]"
+                  class="block h-[17px] w-[17px] lg:h-[25px] lg:w-[25px]"
                 >
                   <span class="sr-only">Go to Cesar's LinkedIn Profile</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                      fill="#ffffff"
-                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                    ></path>
-                  </svg>
+<svg class="w-full h-auto" width="256" height="256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256"><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="currentColor"/></svg>
                 </a>
               </li>
               <li>
                 <a
                   href="https://x.com/cesarovideo"
-                  class="block h-[17px] w-[17px] lg:h-[20px] lg:w-[20px]"
+                  class="block h-[17px] w-[17px] lg:h-[25px] lg:w-[25px]"
                   rel="noreferrer"
                 >
-                  <span class="sr-only">Twitter/X</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path
-                      fill="#ffffff"
-                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-                    ></path>
-                  </svg>
+                  <span class="sr-only">Go to Cesar's Twitter/X Profile</span>
+                  <svg  class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" width="1200" height="1227" fill="none" viewBox="0 0 1200 1227"><path fill="#fff" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"/></svg>
                 </a>
               </li>
             </ul>
