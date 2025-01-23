@@ -8,11 +8,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 export function Header() {
-  const [navOpen, setNavOpen] = createSignal(false);
-
-  createEffect(() => {
-    console.log(navOpen())
-  })
 
   return (
     <header class="block w-full">
@@ -22,8 +17,7 @@ export function Header() {
         </div>
         <div class="md:grow">
           <nav
-            class={cn('relative font-heading md:text-right flex flex-row  md:gap-14 lg:gap-20 xl:gap-24 md:justify-end', navOpen() ? 'flex': '')}
-            inert={!navOpen()}
+            class={cn('relative font-heading md:text-right flex flex-row  md:gap-14 lg:gap-20 xl:gap-24 md:justify-end')}
           >
             <ul class="flex flex-row md:flex-row items-center gap-8 md:gap-6  lg:gap-12">
               <li>
