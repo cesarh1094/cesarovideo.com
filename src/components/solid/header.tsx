@@ -40,10 +40,10 @@ export function Header() {
             <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6  lg:gap-10">
               <li>
                 <a
-                  href=""
+                  href="https://www.linkedin.com/in/cesarovideo"
                   class="block h-[17px] w-[17px] lg:h-[20px] lg:w-[20px]"
                 >
-                  <span class="sr-only">LinkedIn</span>
+                  <span class="sr-only">Go to Cesar's LinkedIn Profile</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <path
                       fill="#ffffff"
@@ -54,7 +54,7 @@ export function Header() {
               </li>
               <li>
                 <a
-                  href=""
+                  href="https://x.com/cesarovideo"
                   class="block h-[17px] w-[17px] lg:h-[20px] lg:w-[20px]"
                   rel="noreferrer"
                 >

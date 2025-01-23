@@ -1,0 +1,144 @@
+<section class="">
+  <div
+    class="w-full max-w-7xl mx-auto px-8 md:px-12 py-9 pb-30 flex flex-col gap-6 lg:gap-10"
+  >
+    <h2 class="text-5xl font-heading">Things I've worked on</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="worked-on">
+      <div
+        class="flex flex-col bg-terminal-black/40 border-2 border-white/7 gap-4 hover:transition-shadow hover:transition-transform shadow-lg shadow-terminal-red/35 hover:shadow-sm hover:shadow-terminal-red/35 p-6 lg:p-8 lg:pb-9 rounded-lg hover:translate-y-1"
+      >
+        <h3 class="font-heading text-3xl">Climate United</h3>
+        <p class="font-body">
+          A full-stack React website built for performance, SEO and
+          accessibility.
+        </p>
+        <p class="sr-only">
+          This project was built with the following tech stack
+        </p>
+        <div class="flex flex-wrap gap-3 mt-5 mb-4">
+          <span
+            class="font-heading px-6 py-2 bg-terminal-light-blue text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >React</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-red text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >React-router</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-purple text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >TailwindCSS</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-orange text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >Contentful CMS</span
+          >
+        </div>
+        <div class="pt-4 border-t-1 border-t-white/10 mt-auto">
+          <a
+            href="https://weareclimateunited.org"
+            target="_blank"
+            rel="noreferrer nofollow"
+            class="font-body underline font-bold [text-decoration-thickness:_1px] underline-offset-4"
+          >
+            View Project
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex flex-col bg-terminal-black/40 border-2 border-white/7 gap-4 shadow-lg shadow-terminal-orange/35 hover:shadow-sm hover:shadow-terminal-orange/35 p-6 lg:p-8 lg:pb-9 rounded-lg hover:translate-y-1"
+      >
+        <h3 class="font-heading text-3xl">Lambda Legal Website Rebuild</h3>
+        <p class="font-body">
+          A WordPress website built for stability and security.
+        </p>
+        <p class="sr-only">
+          This project was built with the following tech stack
+        </p>
+        <div class="flex flex-wrap gap-3 mt-5 mb-4">
+          <span
+            class="font-heading px-6 py-2 bg-terminal-light-blue text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >WordPress</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-purple text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >PHP</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-red text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >SCSS</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-orange text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >JavaScript</span
+          >
+        </div>
+        <div class="pt-4 border-t-1 border-t-white/10 mt-auto">
+          <a
+            href="https://lambdalegal.org"
+            target="_blank"
+            rel="noreferrer nofollow"
+            class="font-body underline font-bold [text-decoration-thickness:_1px] underline-offset-4"
+          >
+            View Project
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex flex-col bg-terminal-black/40 border-2 border-white/7 gap-4 shadow-lg shadow-terminal-purple/35 hover:shadow-sm hover:shadow-terminal-purple/35 p-6 lg:p-8 lg:pb-9 rounded-lg hover:translate-y-1"
+      >
+        <h3 class="font-heading text-3xl">Food Trust Food Locator</h3>
+        <p class="font-body">
+          A WordPress-backend React application built to handle offline food
+          location services.
+        </p>
+        <p class="sr-only">
+          This project was built with the following tech stack
+        </p>
+        <div class="flex flex-wrap gap-3 mt-5">
+          <span
+            class="font-heading px-6 py-2 bg-terminal-light-blue text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >React</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-purple text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >WordPress</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-pale-purple text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >TypeScript</span
+          >
+          <span
+            class="font-heading px-6 py-2 bg-terminal-orange text-terminal-black rounded-lg inset-ring-2 inset-ring-terminal-black/33"
+            >CSS</span
+          >
+        </div>
+        <div class="pt-4 border-t-1 border-t-white/10 mt-auto">
+          <a
+            href="https://map.thefoodtrust.org"
+            target="_blank"
+            rel="noreferrer nofollow"
+            class="font-body underline font-bold [text-decoration-thickness:_1px] underline-offset-4"
+          >
+            View Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  import gsap from "gsap";
+
+  let mm = gsap.matchMedia();
+
+  mm.add("(prefers-reduced-motion: no-preference)", () => {
+    gsap.from("#worked-on > div ", {
+      delay: 0.3,
+      opacity: 0,
+      y: 200,
+      duration: 2,
+      ease: "power4.out",
+      stagger: 0.1,
+    });
+  });
+</script>
