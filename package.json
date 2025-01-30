@@ -11,27 +11,26 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.0.7",
+    "@astrojs/mdx": "^4.0.8",
     "@astrojs/netlify": "^6.1.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/solid-js": "^5.0.4",
     "@builder.io/qwik": "^1.12.0",
     "@qwikdev/astro": "^0.7.10",
-    "@tailwindcss/vite": "^4.0.0",
-    "astro": "^5.1.10",
-    "clsx": "^2.1.0",
-    "gsap": "^3.12.5",
-    "solid-js": "^1.8.17",
+    "@tailwindcss/vite": "^4.0.1",
+    "astro": "^5.2.0",
+    "clsx": "^2.1.1",
+    "gsap": "^3.12.7",
+    "solid-js": "^1.9.4",
     "tailwind-merge": "^2.6.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.0-alpha.14",
     "@types/bun": "^1.2.1",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "solid-devtools": "^0.30.1",
-    "tailwindcss": "^4.0.0-alpha.14"
+    "tailwindcss": "^4.0.1"
   }
 }
