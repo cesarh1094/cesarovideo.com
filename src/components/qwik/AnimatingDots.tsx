@@ -1,5 +1,4 @@
 /** @jsxImportSource @builder.io/qwik */
-
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import gsap from "gsap";
 
@@ -34,12 +33,12 @@ export default component$(() => {
 
   return (
     <div id="blocks" class="flex justify-center gap-6 md:gap-10 relative" inert>
-      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-green"></div>
-      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-light-blue"></div>
-      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-pale-purple"></div>
-      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-purple"></div>
-      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-orange"></div>
-      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-red"></div>
+      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-green opacity-0"></div>
+      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-light-blue opacity-0"></div>
+      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-pale-purple opacity-0"></div>
+      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-purple opacity-0"></div>
+      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-orange opacity-0"></div>
+      <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-red opacity-0"></div>
     </div>
   );
 });

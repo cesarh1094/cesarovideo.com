@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Jersey+25&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-family-heading: "Jersey 25", sans-serif;
+  --font-heading: "Jersey 25", sans-serif;
+  --font-body: "Fira Code", sans-serif;
 
+  --color-black: #000;
+  --color-white: #fff;
   --color-terminal-deep-black: #1a1b26;
   --color-terminal-black: #1f2335;
   --color-terminal-red: #f7768e;
@@ -17,6 +19,8 @@
 html,
 body {
   /* @apply color-terminal-black; */
-  background: var(--color-terminal-black);
+  @apply antialiased subpixel-antialiased;
+
+  background: var(--color-terminal-deep-black);
   color: var(--color-white);
 }
