@@ -3,12 +3,12 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import qwikdev from "@qwikdev/astro";
 import tailwindcss from "@tailwindcss/vite";
-
 import solidJs from "@astrojs/solid-js";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://cesarovideo.com",
   vite: {
     plugins: [tailwindcss()],
   },
@@ -19,7 +19,10 @@ export default defineConfig({
       include: "**/qwik/*",
     }),
     solidJs({
+      devtools: true,
       include: ["**/solid/*", "**/node_modules/@suid/material/**"],
     }),
   ],
+  output: 'server',
+  adapter: netlify(),
 });
