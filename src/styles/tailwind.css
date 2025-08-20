@@ -16,7 +16,6 @@
 
 html,
 body {
-  /* @apply color-terminal-black; */
-  background: var(--color-terminal-black);
-  color: var(--color-white);
+  background: var(--color-terminal-deep-black);
+  color: var(--color-terminal-pale-purple);
 }
