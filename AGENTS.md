@@ -28,3 +28,8 @@
 ## Error Handling
 - No specific patterns observed - follow framework conventions
 - Use optional props with default values where appropriate
+
+## GitHub Templates
+- PR Template: `.github/pull_request_template.md` - Auto-populates PR descriptions with type classification, testing checklist, and visual change sections
+- Release Template: `.github/release-template.md` - Structured template for consistent release notes with features, bug fixes, dependencies, and breaking changes
+- Use templates to maintain consistency across PRs and releases
