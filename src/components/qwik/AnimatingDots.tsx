@@ -6,8 +6,6 @@ import gsap from "gsap";
 export default component$(() => {
   useVisibleTask$(() => {
     let blockAnimationTimeline = gsap.timeline({
-      repeat: 2,
-      yoyo: true,
       delay: 0.01,
     });
 
@@ -33,7 +31,7 @@ export default component$(() => {
   });
 
   return (
-    <div id="blocks" class="flex justify-center gap-6 md:gap-10 relative" inert>
+    <div id="blocks" class="flex justify-center gap-4 md:gap-8 relative" inert>
       <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-green"></div>
       <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-light-blue"></div>
       <div class="block w-[7px] h-[7px] md:w-[10px] md:h-[10px] bg-terminal-pale-purple"></div>

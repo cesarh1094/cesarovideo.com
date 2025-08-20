@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-family-heading: "Jersey 25", sans-serif;
+  --font-heading: "Jersey 25", sans-serif;
 
   --color-terminal-deep-black: #1a1b26;
   --color-terminal-black: #1f2335;
@@ -16,7 +16,6 @@
 
 html,
 body {
-  /* @apply color-terminal-black; */
-  background: var(--color-terminal-black);
-  color: var(--color-white);
+  background: var(--color-terminal-deep-black);
+  color: var(--color-terminal-pale-purple);
 }
