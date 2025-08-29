@@ -5,6 +5,7 @@ import "../styles/tailwind.css";
 import { Header } from "../components/solid/header";
 import Hero from "../components/homepage/Hero.astro";
 import Work from "../components/homepage/Work.astro";
+import Footer from "../components/Footer.astro";
 
 Astro.response.headers.set("Cache-Control", "public, max-age=300, s-maxage=3600");
 
@@ -27,5 +28,6 @@ Astro.response.headers.set(
       <Hero />
       <Work />
     </main>
+    <Footer />
   </body>
 </html>
