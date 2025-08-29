@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import AnimationDots from "../components/qwik/AnimatingDots";
+import AnimationDots from "../components/solid/AnimatingDots";
 import "../styles/tailwind.css";
 ---
 
@@ -23,7 +23,7 @@ import "../styles/tailwind.css";
         <p class="font-body text-md md:text-lg">
           This is not the page you are looking for
         </p>
-        <AnimationDots />
+        <AnimationDots client:load />
       </div>
       <div class="absolute top-[50%] left-[50%] h-[80%] w-[80%]"></div>
     </main>
