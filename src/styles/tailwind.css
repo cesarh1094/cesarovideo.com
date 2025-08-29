@@ -14,12 +14,87 @@
   --color-terminal-purple: #bb9af7;
   --color-terminal-light-blue: #7dcfff;
   --color-terminal-green: #c3e88d;
+
+  /* Modern shadows and effects */
+  --shadow-glow-blue: 0 0 20px rgba(125, 207, 255, 0.1);
+  --shadow-glow-purple: 0 0 20px rgba(187, 154, 247, 0.1);
+  --shadow-glow-red: 0 0 20px rgba(247, 118, 142, 0.1);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Gradient backgrounds */
+  --gradient-terminal: linear-gradient(135deg, var(--color-terminal-deep-black) 0%, var(--color-terminal-black) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(31, 35, 53, 0.8) 0%, rgba(26, 27, 38, 0.9) 100%);
+  --gradient-body-vignette: radial-gradient(ellipse 150% 100% at center, var(--color-terminal-deep-black) 0%, var(--color-terminal-deep-black) 65%, rgba(125, 207, 255, 0.03) 85%, rgba(125, 207, 255, 0.06) 100%);
+  --gradient-body-animated: linear-gradient(-45deg, var(--color-terminal-deep-black), rgba(31, 35, 53, 0.9), var(--color-terminal-black), rgba(187, 154, 247, 0.15), var(--color-terminal-deep-black), rgba(125, 207, 255, 0.1));
+  --gradient-body-mesh: 
+    radial-gradient(circle at 5% 5%, rgba(125, 207, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 95% 5%, rgba(187, 154, 247, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 5% 95%, rgba(187, 154, 247, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 95% 95%, rgba(247, 118, 142, 0.04) 0%, transparent 40%),
+    var(--color-terminal-deep-black);
 }
 
-html,
 body {
   @apply antialiased subpixel-antialiased;
+  background: var(--color-terminal-deep-black); /* fallback */
+  background: var(--gradient-body-mesh);
+  color: var(--color-terminal-pale-purple);
+  min-height: 100vh;
+}
 
-  background: var(--color-terminal-deep-black);
-  color: var(--color-white);
+/* Modern scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus states for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-terminal-light-blue);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Glass morphism utility class */
+.glass {
+  background: rgba(31, 35, 53, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced card styling */
+.card-modern {
+  background: var(--gradient-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-modern:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.glow-purple {
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.glow-red {
+  box-shadow: var(--shadow-glow-red);
+}
+
+/* Animated gradient keyframes */
+@keyframes gradient-shift {
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
 }
