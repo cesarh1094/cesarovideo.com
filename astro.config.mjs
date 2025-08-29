@@ -15,8 +15,7 @@ export default defineConfig({
     mdx(),
     sitemap(),
     solidJs({
-      devtools: true,
-      include: ["**/solid/*", "**/node_modules/@suid/material/**"],
+      include: ["**/solid/*"],
     }),
   ],
   output: 'server',
