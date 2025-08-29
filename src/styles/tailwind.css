@@ -28,8 +28,8 @@
   --gradient-body-vignette: radial-gradient(ellipse 150% 100% at center, var(--color-terminal-deep-black) 0%, var(--color-terminal-deep-black) 65%, rgba(125, 207, 255, 0.03) 85%, rgba(125, 207, 255, 0.06) 100%);
   --gradient-body-animated: linear-gradient(-45deg, var(--color-terminal-deep-black), rgba(31, 35, 53, 0.9), var(--color-terminal-black), rgba(187, 154, 247, 0.15), var(--color-terminal-deep-black), rgba(125, 207, 255, 0.1));
   --gradient-body-mesh: 
-    radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-terminal-light-blue) 7%, transparent) 0%, transparent 40%),
-    radial-gradient(circle at 95% 5%, color-mix(in srgb, var(--color-terminal-purple) 7%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-terminal-light-blue) 9%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 95% 5%, color-mix(in srgb, var(--color-terminal-purple) 9%, transparent) 0%, transparent 40%),
     radial-gradient(circle at 5% 95%, color-mix(in srgb, var(--color-terminal-purple) 7%, transparent) 0%, transparent 40%),
     radial-gradient(circle at 95% 95%, color-mix(in srgb, var(--color-terminal-red) 7%, transparent) 0%, transparent 40%),
     var(--color-terminal-deep-black);
