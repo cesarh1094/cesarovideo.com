@@ -28,10 +28,16 @@
   --gradient-body-vignette: radial-gradient(ellipse 150% 100% at center, var(--color-terminal-deep-black) 0%, var(--color-terminal-deep-black) 65%, rgba(125, 207, 255, 0.03) 85%, rgba(125, 207, 255, 0.06) 100%);
   --gradient-body-animated: linear-gradient(-45deg, var(--color-terminal-deep-black), rgba(31, 35, 53, 0.9), var(--color-terminal-black), rgba(187, 154, 247, 0.15), var(--color-terminal-deep-black), rgba(125, 207, 255, 0.1));
   --gradient-body-mesh: 
-    radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-terminal-light-blue) 9%, transparent) 0%, transparent 40%),
-    radial-gradient(circle at 95% 5%, color-mix(in srgb, var(--color-terminal-purple) 9%, transparent) 0%, transparent 40%),
-    radial-gradient(circle at 5% 95%, color-mix(in srgb, var(--color-terminal-purple) 7%, transparent) 0%, transparent 40%),
-    radial-gradient(circle at 95% 95%, color-mix(in srgb, var(--color-terminal-red) 7%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-terminal-light-blue) 12%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 95% 5%, color-mix(in srgb, var(--color-terminal-purple) 10%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 5% 95%, color-mix(in srgb, var(--color-terminal-purple) 10%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 95% 95%, color-mix(in srgb, var(--color-terminal-red) 10%, transparent) 0%, transparent 40%),
+    var(--color-terminal-deep-black);
+  --gradient-body-mesh-mobile: 
+    radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--color-terminal-light-blue) 5%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--color-terminal-purple) 5%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, color-mix(in srgb, var(--color-terminal-purple) 6%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 90% 90%, color-mix(in srgb, var(--color-terminal-red) 6%, transparent) 0%, transparent 50%),
     var(--color-terminal-deep-black);
 }
 
@@ -41,6 +47,13 @@ body {
   background: var(--gradient-body-mesh);
   color: var(--color-terminal-pale-purple);
   min-height: 100vh;
+}
+
+/* Mobile-optimized gradient */
+@media (max-width: 768px) {
+  body {
+    background: var(--gradient-body-mesh-mobile);
+  }
 }
 
 /* Modern scroll behavior */
