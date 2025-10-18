@@ -95,6 +95,11 @@ const { title, description, image = "/default-seo-image.jpg" } = Astro.props;
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
+  rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Jersey+25&display=swap"
+  as="style"
+/>
+<link
   href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Jersey+25&display=swap"
   rel="stylesheet"
 />
@@ -120,3 +125,21 @@ const { title, description, image = "/default-seo-image.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Theme Detection and Application Script -->
+<script is:inline>
+  (function () {
+    function getThemePreference() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        return savedTheme;
+      }
+      return window.matchMedia("(prefers-color-scheme: light)").matches
+        ? "light"
+        : "dark";
+    }
+
+    const theme = getThemePreference();
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
