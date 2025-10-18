@@ -17,15 +17,14 @@
   --color-accent-iris: #907aa9;
   --color-border: rgba(255, 255, 255, 0.1);
   --color-border-hover: rgba(255, 255, 255, 0.2);
-
-  /* Neutral logo color used by the tech grid */
-  --logo-neutral-color: #ffffff;
-
-  /* Next.js circle fill */
-  --next-circle-fill: var(--color-bg-surface);
 }
 
 @theme {
+  /* Next.js circle fill */
+  /* Neutral logo color used by the tech grid */
+  --logo-neutral-color: #ffffff;
+  --next-circle-fill: var(--color-bg-surface);
+
   --font-heading: "Jersey 25", sans-serif;
   --font-body: "Fira Code", sans-serif;
 
@@ -67,14 +66,17 @@
     var(--color-terminal-deep-black);
 }
 
+html {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
 html,
 body {
   @apply antialiased subpixel-antialiased;
-  background: var(--color-bg-primary); /* fallback */
   background: var(--gradient-body-mesh);
   color: var(--color-text-primary);
-  min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
 [data-theme="light"] {
@@ -98,8 +100,7 @@ body {
 }
 
 /* Light theme gradients */
-[data-theme="light"],
-[data-theme="light"] body {
+[data-theme="light"], [data-theme="light"] body {
   background: var(--color-bg-primary);
   background:
     radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-accent-blue) 8%, transparent) 0%, transparent 40%),
@@ -111,6 +112,7 @@ body {
 
 /* Mobile-optimized gradient */
 @media (max-width: 768px) {
+  html,
   body {
     background: var(--gradient-body-mesh-mobile);
   }
