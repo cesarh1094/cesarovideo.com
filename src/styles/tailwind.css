@@ -1,21 +1,210 @@
-@import url("https://fonts.googleapis.com/css2?family=Jersey+25&display=swap");
 @import "tailwindcss";
 
-@theme {
-  --font-heading: "Jersey 25", sans-serif;
+/* Theme-aware color variables */
+:root {
+  /* Dark theme colors (default) */
+  --color-bg-primary: #05070d;
+  --color-bg-secondary: #101420;
+  --color-bg-surface: #1a1e2e;
+  --color-text-primary: #c0caf5;
+  --color-text-secondary: #9893a5;
+  --color-text-muted: #797593;
+  --color-accent-red: #f7768e;
+  --color-accent-orange: #ff9e64;
+  --color-accent-purple: #bb9af7;
+  --color-accent-blue: #7dcfff;
+  --color-accent-green: #c3e88d;
+  --color-accent-iris: #907aa9;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+}
 
-  --color-terminal-deep-black: #1a1b26;
-  --color-terminal-black: #1f2335;
-  --color-terminal-red: #f7768e;
-  --color-terminal-orange: #ff9e64;
-  --color-terminal-pale-purple: #c0caf5;
-  --color-terminal-purple: #bb9af7;
-  --color-terminal-light-blue: #7dcfff;
-  --color-terminal-green: #c3e88d;
+@theme {
+  /* Next.js circle fill */
+  /* Neutral logo color used by the tech grid */
+  --logo-neutral-color: #ffffff;
+  --next-circle-fill: var(--color-bg-surface);
+
+  --font-heading: "Jersey 25", sans-serif;
+  --font-body: "Fira Code", sans-serif;
+
+  /* Legacy color variables for compatibility */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-terminal-deep-black: var(--color-bg-primary);
+  --color-terminal-black: var(--color-bg-secondary);
+  --color-terminal-red: var(--color-accent-red);
+  --color-terminal-orange: var(--color-accent-orange);
+  --color-terminal-pale-purple: var(--color-text-primary);
+  --color-terminal-purple: var(--color-accent-purple);
+  --color-terminal-light-blue: var(--color-accent-blue);
+  --color-terminal-green: var(--color-accent-green);
+
+  /* Modern shadows and effects */
+  --shadow-glow-blue: 0 0 20px rgba(125, 207, 255, 0.1);
+  --shadow-glow-purple: 0 0 20px rgba(187, 154, 247, 0.1);
+  --shadow-glow-red: 0 0 20px rgba(247, 118, 142, 0.1);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Gradient backgrounds */
+  --gradient-terminal: linear-gradient(135deg, var(--color-terminal-deep-black) 0%, var(--color-terminal-black) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(31, 35, 53, 0.8) 0%, rgba(5, 7, 13, 0.9) 100%);
+  --gradient-body-vignette: radial-gradient(ellipse 150% 100% at center, var(--color-terminal-deep-black) 0%, var(--color-terminal-deep-black) 65%, rgba(125, 207, 255, 0.03) 85%, rgba(125, 207, 255, 0.06) 100%);
+  --gradient-body-animated: linear-gradient(-45deg, var(--color-terminal-deep-black), rgba(31, 35, 53, 0.9), var(--color-terminal-black), rgba(187, 154, 247, 0.15), var(--color-terminal-deep-black), rgba(125, 207, 255, 0.1));
+  --gradient-body-mesh:
+    radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-terminal-light-blue) 12%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 95% 5%, color-mix(in srgb, var(--color-terminal-purple) 10%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 5% 95%, color-mix(in srgb, var(--color-terminal-purple) 10%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 95% 95%, color-mix(in srgb, var(--color-terminal-red) 10%, transparent) 0%, transparent 40%),
+    var(--color-terminal-deep-black);
+  --gradient-body-mesh-mobile:
+    radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--color-terminal-light-blue) 5%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--color-terminal-purple) 5%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, color-mix(in srgb, var(--color-terminal-purple) 6%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 90% 90%, color-mix(in srgb, var(--color-terminal-red) 6%, transparent) 0%, transparent 50%),
+    var(--color-terminal-deep-black);
+}
+
+html {
+  height: 100%;
+  overscroll-behavior: none;
 }
 
 html,
 body {
-  background: var(--color-terminal-deep-black);
-  color: var(--color-terminal-pale-purple);
+  @apply antialiased subpixel-antialiased;
+  background: var(--color-bg-pimary);
+  background: var(--gradient-body-mesh);
+  color: var(--color-text-primary);
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
+
+[data-theme="light"] {
+  /* Rose Pine Dawn colors */
+  --color-bg-primary: #faf4ed;
+  --color-bg-secondary: #fffaf3;
+  --color-bg-surface: #f2e9e1;
+  --color-text-primary: #575279;
+  --color-text-secondary: #797593;
+  --color-text-muted: #9893a5;
+  --color-accent-red: #b4637a;
+  --color-accent-orange: #ea9d34;
+  --color-accent-purple: #907aa9;
+  --color-accent-blue: #56949f;
+  --color-accent-green: #286983;
+  --color-accent-iris: #907aa9;
+  --color-border: rgba(87, 82, 121, 0.15);
+  --color-border-hover: rgba(87, 82, 121, 0.25);
+  --logo-neutral-color: var(--color-text-primary);
+  --next-circle-fill: #000000;
+}
+
+/* Light theme gradients */
+[data-theme="light"] body {
+  background: var(--color-bg-primary);
+  background:
+    radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-accent-blue) 8%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 95% 5%, color-mix(in srgb, var(--color-accent-purple) 8%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 5% 95%, color-mix(in srgb, var(--color-accent-iris) 8%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 95% 95%, color-mix(in srgb, var(--color-accent-red) 8%, transparent) 0%, transparent 40%),
+    var(--color-bg-primary);
+}
+
+/* Mobile-optimized gradient */
+@media (max-width: 768px) {
+  html, body  {
+    background: var(--gradient-body-mesh-mobile);
+  }
+
+  [data-theme="light"] body {
+    background:
+      radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--color-accent-blue) 4%, transparent) 0%, transparent 50%),
+      radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--color-accent-purple) 4%, transparent) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, color-mix(in srgb, var(--color-accent-iris) 5%, transparent) 0%, transparent 50%),
+      radial-gradient(circle at 90% 90%, color-mix(in srgb, var(--color-accent-red) 5%, transparent) 0%, transparent 50%),
+      var(--color-bg-primary);
+  }
+}
+
+/* Modern scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus states for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-terminal-light-blue);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Glass morphism utility class */
+.glass {
+  background: rgba(31, 35, 53, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+}
+
+/* Enhanced card styling */
+.card-modern {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-modern:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.glow-purple {
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.glow-red {
+  box-shadow: var(--shadow-glow-red);
+}
+
+/* Animated gradient keyframes */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Theme-aware logo tinting for white/gray SVG parts */
+.logo-theme { color: var(--logo-neutral-color); }
+
+/* Only target neutral fills/strokes so brand colors remain */
+.logo-theme > :not(.next-logo) svg [fill="#fff"],
+.logo-theme > :not(.next-logo) svg [fill="#FFF"],
+.logo-theme > :not(.next-logo) svg [fill="#ffffff"],
+.logo-theme > :not(.next-logo) svg [fill="#FFFFFF"],
+.logo-theme > :not(.next-logo) svg [fill="white"],
+.logo-theme > :not(.next-logo) svg [fill="#ebebeb"],
+.logo-theme > :not(.next-logo) svg [fill="#EBEBEB"],
+.logo-theme > :not(.next-logo) svg [stroke="#fff"],
+.logo-theme > :not(.next-logo) svg [stroke="#FFF"],
+.logo-theme > :not(.next-logo) svg [stroke="#ffffff"],
+.logo-theme > :not(.next-logo) svg [stroke="#FFFFFF"],
+.logo-theme > :not(.next-logo) svg [stroke="white"],
+.logo-theme > :not(.next-logo) svg [stroke="#ebebeb"],
+.logo-theme > :not(.next-logo) svg [stroke="#EBEBEB"] {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Keep TS and CSS tiles fully white in light mode using Tailwind text-white */
+/* Because we now set .logo-theme color via --logo-neutral-color, setting text-white on tiles overrides it. */
+
