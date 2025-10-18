@@ -2,6 +2,8 @@
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import AnimationDots from "../components/solid/AnimatingDots";
+import { Header } from "../components/solid/header";
+import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
 ---
 
@@ -10,11 +12,14 @@ import "../styles/tailwind.css";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="overflow-x-hidden antialiased">
+  <body
+    class="overflow-x-hidden antialiased flex flex-col min-h-[100vh] gap-10"
+  >
+    <Header client:load />
     <main
-      class="relative min-h-[100vh] flex justify-center items-center overflow-hidden gap-20"
+      class="relative grow flex justify-center items-center overflow-hidden gap-20"
     >
-      <div class="relative flex gap-8 gap-12 flex-col">
+      <div class="relative flex gap-8 gap-12 flex-col items-center">
         <h1
           class="font-heading text-5xl md:text-7xl lg:text-8xl relative text-center"
         >
@@ -27,5 +32,6 @@ import "../styles/tailwind.css";
       </div>
       <div class="absolute top-[50%] left-[50%] h-[80%] w-[80%]"></div>
     </main>
+    <Footer />
   </body>
 </html>
