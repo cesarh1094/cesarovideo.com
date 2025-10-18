@@ -71,8 +71,10 @@ html {
   overscroll-behavior: none;
 }
 
-html {
+html,
+body {
   @apply antialiased subpixel-antialiased;
+  background: var(--color-bg-pimary);
   background: var(--gradient-body-mesh);
   color: var(--color-text-primary);
   transition: background-color 0.2s ease-out, color 0.2s ease-out;
@@ -99,7 +101,7 @@ html {
 }
 
 /* Light theme gradients */
-[data-theme="light"] {
+[data-theme="light"] body {
   background: var(--color-bg-primary);
   background:
     radial-gradient(circle at 5% 5%, color-mix(in srgb, var(--color-accent-blue) 8%, transparent) 0%, transparent 40%),
@@ -111,11 +113,11 @@ html {
 
 /* Mobile-optimized gradient */
 @media (max-width: 768px) {
-  html {
+  html, body  {
     background: var(--gradient-body-mesh-mobile);
   }
 
-  [data-theme="light"] {
+  [data-theme="light"] body {
     background:
       radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--color-accent-blue) 4%, transparent) 0%, transparent 50%),
       radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--color-accent-purple) 4%, transparent) 0%, transparent 50%),
