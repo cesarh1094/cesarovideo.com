@@ -72,12 +72,10 @@ Personal portfolio website for Cesar Hernandez built with modern web technologie
 - Dark/light theme support
 
 ## Error Handling
-- Follow framework conventions for error boundaries
-- Use optional props with sensible defaults
-- Graceful degradation for JavaScript-disabled users
-- Proper TypeScript error handling patterns
+- No specific patterns observed - follow framework conventions
+- Use optional props with default values where appropriate
 
-## Testing Strategy (TODO)
-- **Current State**: No testing infrastructure
-- **Recommended**: Vitest for unit tests, Playwright for E2E
-- **Priority Areas**: Component rendering, content parsing, SEO validation
+## GitHub Templates
+- PR Template: `.github/pull_request_template.md` - Auto-populates PR descriptions with type classification, testing checklist, and visual change sections
+- Release Template: `.github/release-template.md` - Structured template for consistent release notes with features, bug fixes, dependencies, and breaking changes
+- Use templates to maintain consistency across PRs and releases
